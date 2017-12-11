@@ -1,13 +1,10 @@
 public class TransactionGate
 {
     public void postEntries(List entries) {
-        List entriesToAdd = new LinkedList();
-        for (Iterator it = entries.iterator(); it.hasNext(); ) {
+        List entriesToAdd = uniqueEntries(entries);
+        for (Iterator it = entriesToAdd.iterator(); it.hasNext(); ) {
             Entry entry = (Entry)it.next();
-            if (!transactionBundle.getListManager().hasEntry(entry)) {
-                entry.postDate();
-                entriesToAdd.add(entry);
-            }
+            entry.postDate();
         }
         transactionBundle.getListManager().add(entriesToAdd);
     }
