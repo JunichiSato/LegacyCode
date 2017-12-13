@@ -1,12 +1,12 @@
 using namespace std;
 
-class QuarterlyReportTableHeaderProducer
+class QuarterlyReportTableHeaderGenerator
 {
 public:
-    string makeHeader();
+    string generate();
 };
 
-string QuarterlyReportTableHeaderProducer::makeHeader()
+string QuarterlyReportTableHeaderGenerator::generate()
 {
     return "<tr><td>Department</td><td>Manager</td>"
         "<td>Profit</td><td>Expenses</td>";
