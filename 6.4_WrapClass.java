@@ -12,3 +12,8 @@ class Employee
     }
     ...
 }
+
+class LggingEmployee implements Employee
+{
+    
+}
